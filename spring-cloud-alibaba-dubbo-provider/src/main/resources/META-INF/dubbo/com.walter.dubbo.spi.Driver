@@ -1,0 +1,3 @@
+driverWrapper1=com.walter.dubbo.spi.impl.DriverWrapper1
+driverWrapper2=com.walter.dubbo.spi.impl.DriverWrapper2
+myDriver=com.walter.dubbo.spi.impl.MyDriverImpl

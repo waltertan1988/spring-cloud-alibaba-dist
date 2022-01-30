@@ -1,8 +1,9 @@
 /**
  * BaseTests.java 2018年10月13日
  */
-package com.walter.dubbo.impl;
+package com.walter;
 
+import com.walter.dubbo.DubboApplication;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -17,7 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @version $Id$
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = DubboApplication.class)
 public class BaseTests {
 
 }
