@@ -11,7 +11,7 @@ spring-cloud-alibaba学习
 * spring-cloud-alibaba-dubbo-consumer：服务消费者
 
 ## 部署
-###启动nacos
+### 启动nacos 
 默认账号密码都是nacos
 ```text
 startup.cmd -m standalone
