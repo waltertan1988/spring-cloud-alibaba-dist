@@ -1,8 +1,6 @@
 package com.walter.dubbo.impl;
 
 import com.walter.dubbo.vo.SayHelloRequest;
-import org.apache.dubbo.common.constants.ClusterRules;
-import org.apache.dubbo.common.constants.LoadbalanceRules;
 import org.apache.dubbo.config.annotation.DubboService;
 
 /**
@@ -10,7 +8,7 @@ import org.apache.dubbo.config.annotation.DubboService;
  * @date 2022/1/29
  *
  */
-@DubboService(cluster = ClusterRules.FAIL_FAST, loadbalance = LoadbalanceRules.ROUND_ROBIN)
+@DubboService(cluster = "failfast", loadbalance = "roundrobin")
 public class HelloApiImpl implements HelloApi {
 
     @Override
