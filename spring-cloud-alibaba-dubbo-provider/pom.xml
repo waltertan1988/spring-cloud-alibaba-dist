@@ -53,6 +53,11 @@
             <artifactId>spring-cloud-starter-dubbo</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
         <!--使用nacos作为注册中心-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
