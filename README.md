@@ -44,6 +44,7 @@ management.endpoints.web.exposure.include=*
 spring.application.name=dubbo-provider
 
 # 使用nacos作为注册中心
+spring.cloud.nacos.discovery.namespace=f95d527a-f6d7-484a-8638-1095815130ae
 spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
 
 # 使用zookeeper作为注册中心
@@ -67,6 +68,7 @@ management.endpoints.web.exposure.include=*
 server.port=7080
 
 # 使用nacos作为注册中心（仅订阅服务）
+spring.cloud.nacos.discovery.namespace=f95d527a-f6d7-484a-8638-1095815130ae
 spring.cloud.nacos.discovery.register-enabled=false
 spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
 
