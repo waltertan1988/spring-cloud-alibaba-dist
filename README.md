@@ -18,7 +18,7 @@ startup.cmd -m standalone
 访问http://localhost:8848/nacos  
 默认账号密码都是nacos
           
-### nacos控制台上添加应用的配置
+### 在nacos控制台上添加应用的配置
 这里对nacos配置的层次定义为： 
 * namespace：项目组名称，如xxx电商项目组 
 * group：项目组下某个应用中心的名称，如商品中心、订单中心等
