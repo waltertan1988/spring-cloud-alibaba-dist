@@ -69,6 +69,17 @@
 <!--            <groupId>org.springframework.cloud</groupId>-->
 <!--            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>-->
 <!--        </dependency>-->
+
+        <!--dubbo服务集成sentinel-->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-apache-dubbo-adapter</artifactId>
+        </dependency>
+        <!--dubbo服务对接sentinel dashboard-->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-transport-simple-http</artifactId>
+        </dependency>
 	</dependencies>
 
 	<build>

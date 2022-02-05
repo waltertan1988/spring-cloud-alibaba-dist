@@ -1,6 +1,7 @@
-package com.walter.dubbo.impl;
+package com.walter.dubbo.api;
 
 import com.walter.dubbo.vo.SayHelloRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboService;
 
 /**
@@ -8,6 +9,7 @@ import org.apache.dubbo.config.annotation.DubboService;
  * @date 2022/1/29
  *
  */
+@Slf4j
 @DubboService(cluster = "failfast", loadbalance = "roundrobin")
 public class HelloApiImpl implements HelloApi {
 

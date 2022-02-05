@@ -1,6 +1,6 @@
 package com.walter.mock;
 
-import com.walter.dubbo.impl.HelloApi;
+import com.walter.dubbo.api.HelloApi;
 import com.walter.dubbo.vo.SayHelloRequest;
 
 /**
@@ -12,6 +12,6 @@ public class HelloApiMock implements HelloApi {
 
     @Override
     public String say(SayHelloRequest request) {
-        return "无法调用com.walter.dubbo.impl.HelloApi.say，服务降级中，请稍后再试...";
+        return "无法调用com.walter.dubbo.api.HelloApi.say，服务降级中，请稍后再试...";
     }
 }

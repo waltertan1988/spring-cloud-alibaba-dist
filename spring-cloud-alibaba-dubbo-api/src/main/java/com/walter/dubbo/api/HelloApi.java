@@ -1,4 +1,4 @@
-package com.walter.dubbo.impl;
+package com.walter.dubbo.api;
 
 import com.walter.dubbo.vo.SayHelloRequest;
 

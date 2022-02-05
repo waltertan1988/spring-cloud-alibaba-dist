@@ -89,3 +89,9 @@ java -Dserver.port=7777 -Dcsp.sentinel.dashboard.server=localhost:7777 -Dproject
 ```
 访问http://localhost:7777  
 默认账号密码都是sentinel
+
+### 启动dubbo服务提供者
+启动dubbo提供者时，加入以下启动参数：
+```text
+-Djava.net.preferIPv4Stack=true -Dcsp.sentinel.api.port=8720 -Dcsp.sentinel.dashboard.server=127.0.0.1:7777 -Dproject.name=dubbo-provider
+```

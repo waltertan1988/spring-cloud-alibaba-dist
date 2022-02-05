@@ -1,7 +1,7 @@
 /**
  * BaseTests.java 2018年10月13日
  */
-package com.walter.dubbo.impl;
+package com.walter.dubbo.api;
 
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
