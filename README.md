@@ -12,11 +12,11 @@ spring-cloud-alibaba学习
 
 ## 部署
 ### 启动nacos 
-默认账号密码都是nacos
-
 ```text
 startup.cmd -m standalone
 ```
+访问http://localhost:8848/nacos  
+默认账号密码都是nacos
           
 ### nacos控制台上添加应用的配置
 这里对nacos配置的层次定义为： 
@@ -58,6 +58,8 @@ spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
 * namespace：spring-cloud-alibaba-study
 * 格式：properties 
 ```text
+app.profile=dev
+
 dubbo.cloud.subscribed-services=dubbo-provider
 dubbo.consumer.check=false
 
@@ -75,4 +77,15 @@ spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
 # 使用zookeeper作为注册中心（仅订阅服务）
 #spring.cloud.zookeeper.discovery.register=false
 #spring.cloud.zookeeper.connect-string=localhost:2181
+
+# 使用sentinel dashboard进行流控配置
+spring.cloud.sentinel.transport.dashboard=127.0.0.1:7777
+spring.cloud.sentinel.transport.port: 8719
 ```
+
+### 启动sentinel控制台
+```text
+java -Dserver.port=7777 -Dcsp.sentinel.dashboard.server=localhost:7777 -Dproject.name=sentinel-dashboard -jar target/sentinel-dashboard.jar
+```
+访问http://localhost:7777  
+默认账号密码都是sentinel
