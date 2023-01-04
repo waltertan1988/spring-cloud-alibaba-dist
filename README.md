@@ -8,7 +8,7 @@ spring-cloud-alibaba学习
 ## 模块划分
 * spring-cloud-alibaba-dubbo-api：服务的api接口
 * spring-cloud-alibaba-dubbo-provider：服务提供者
-* spring-cloud-alibaba-dubbo-consumer：服务消费者
+* spring-cloud-alibaba-dubbo-consumer：服务消费者（Web应用）
 
 ## 部署
 ### 启动nacos 
