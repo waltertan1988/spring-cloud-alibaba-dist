@@ -2,7 +2,7 @@
 spring-cloud-alibaba学习
 
 ## 版本说明
-* 使用的Spring Cloud Alibaba的版本为2.2.6.RELEASE
+* 使用的Spring Cloud Alibaba的版本为2.2.9.RELEASE，Dubbo版本为3.1.4，Nacos版本为2.1.2
 * Spring Cloud Alibaba各组件对应的版本，参看[这里](https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E)
 
 ## 模块划分
@@ -41,15 +41,17 @@ logging.level.root=INFO
 
 management.endpoints.web.exposure.include=*
 
-spring.application.name=dubbo-provider
-
-# 使用nacos作为注册中心
-spring.cloud.nacos.discovery.namespace=f95d527a-f6d7-484a-8638-1095815130ae
-spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
-
 # 使用zookeeper作为注册中心
 #spring.cloud.zookeeper.discovery.register=true
 #spring.cloud.zookeeper.connect-string=localhost:2181
+
+# 使用nacos作为注册中心
+# 旧方式，spring cloud alibaba包含了dubbo的依赖
+#spring.cloud.nacos.discovery.namespace=f95d527a-f6d7-484a-8638-1095815130ae
+#spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
+#
+# 新方式，spring cloud alibaba从2021.0.1.0版本开始，移除了dubbo的依赖
+dubbo.registry.address=nacos://127.0.0.1:8848?namespace=f95d527a-f6d7-484a-8638-1095815130ae
 ```
 
 #### 添加服务消费者的应用配置 
@@ -69,18 +71,23 @@ management.endpoints.web.exposure.include=*
 
 server.port=7080
 
-# 使用nacos作为注册中心（仅订阅服务）
-spring.cloud.nacos.discovery.namespace=f95d527a-f6d7-484a-8638-1095815130ae
-spring.cloud.nacos.discovery.register-enabled=false
-spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
-
 # 使用zookeeper作为注册中心（仅订阅服务）
 #spring.cloud.zookeeper.discovery.register=false
 #spring.cloud.zookeeper.connect-string=localhost:2181
 
+# 使用nacos作为注册中心（仅订阅服务）
+# 旧方式，spring cloud alibaba包含了dubbo的依赖
+#spring.cloud.nacos.discovery.namespace=f95d527a-f6d7-484a-8638-1095815130ae
+#spring.cloud.nacos.discovery.register-enabled=false
+#spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
+#
+# 新方式，spring cloud alibaba从2021.0.1.0版本开始，移除了dubbo的依赖
+dubbo.registry.address=nacos://127.0.0.1:8848?namespace=f95d527a-f6d7-484a-8638-1095815130ae
+dubbo.registry.register=false
+
 # 使用sentinel dashboard进行流控配置
 spring.cloud.sentinel.transport.dashboard=127.0.0.1:7777
-spring.cloud.sentinel.transport.port: 8719
+spring.cloud.sentinel.transport.port=8719
 ```
 
 ### 启动sentinel控制台

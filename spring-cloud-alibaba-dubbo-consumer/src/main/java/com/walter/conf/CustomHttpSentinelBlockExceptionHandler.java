@@ -2,8 +2,8 @@ package com.walter.conf;
 
 import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.BlockExceptionHandler;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.alibaba.nacos.shaded.com.google.common.collect.Maps;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.collect.Maps;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
