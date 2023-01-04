@@ -2,7 +2,9 @@
 spring-cloud-alibaba学习
 
 ## 版本说明
-* 使用的Spring Cloud Alibaba的版本为2.2.9.RELEASE，Dubbo版本为3.1.4，Nacos版本为2.1.2
+* 使用的Spring Cloud Alibaba的版本为2.2.9.RELEASE
+* Dubbo版本为3.1.4（应用级服务发现）
+* Nacos版本为2.1.2
 * Spring Cloud Alibaba各组件对应的版本，参看[这里](https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E)
 
 ## 模块划分
@@ -52,6 +54,9 @@ management.endpoints.web.exposure.include=*
 #
 # 新方式，spring cloud alibaba从2021.0.1.0版本开始，移除了dubbo的依赖
 dubbo.registry.address=nacos://127.0.0.1:8848?namespace=f95d527a-f6d7-484a-8638-1095815130ae
+
+# 仅应用级注册（服务端）
+dubbo.application.register-mode=instance
 ```
 
 #### 添加服务消费者的应用配置 
@@ -88,6 +93,9 @@ dubbo.registry.register=false
 # 使用sentinel dashboard进行流控配置
 spring.cloud.sentinel.transport.dashboard=127.0.0.1:7777
 spring.cloud.sentinel.transport.port=8719
+
+# 仅应用级注册（消费端）
+dubbo.application.service-discovery.migration=FORCE_APPLICATION
 ```
 
 ### 启动sentinel控制台
