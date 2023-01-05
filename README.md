@@ -67,7 +67,6 @@ dubbo.application.register-mode=instance
 ```text
 app.profile=dev
 
-dubbo.cloud.subscribed-services=dubbo-provider
 dubbo.consumer.check=false
 
 logging.level.root=INFO
