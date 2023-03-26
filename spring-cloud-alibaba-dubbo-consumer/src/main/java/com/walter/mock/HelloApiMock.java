@@ -18,4 +18,10 @@ public class HelloApiMock implements HelloApi {
         log.info("say mock is invoked: {}", JSON.toJSONString(request));
         return "无法调用com.walter.dubbo.api.HelloApi.say，服务通过Mock方式降级中，请稍后再试...";
     }
+
+    @Override
+    public String talk(String who, String content) {
+        log.info("talk mock is invoked: {}, {}", who, content);
+        return "无法调用com.walter.dubbo.api.HelloApi.talk，服务通过Mock方式降级中，请稍后再试...";
+    }
 }

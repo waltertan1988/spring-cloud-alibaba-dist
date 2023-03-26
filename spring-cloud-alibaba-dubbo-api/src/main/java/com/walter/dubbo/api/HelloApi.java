@@ -8,4 +8,6 @@ import com.walter.dubbo.vo.SayHelloRequest;
 public interface HelloApi {
 
     String say(SayHelloRequest request);
+
+    String talk(String who, String content);
 }
