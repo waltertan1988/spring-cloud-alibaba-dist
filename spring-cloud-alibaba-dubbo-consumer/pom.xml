@@ -18,6 +18,12 @@
         <dependency>
             <groupId>com.walter</groupId>
             <artifactId>spring-cloud-alibaba-dubbo-api</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>validation-api</artifactId>
+                    <groupId>javax.validation</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
 		<dependency>

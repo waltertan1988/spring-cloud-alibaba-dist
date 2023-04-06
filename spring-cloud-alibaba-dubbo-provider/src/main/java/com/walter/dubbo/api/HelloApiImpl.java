@@ -13,7 +13,7 @@ import org.apache.dubbo.config.annotation.DubboService;
  *
  */
 @Slf4j
-@DubboService(cluster = ClusterRules.FAIL_FAST, loadbalance = LoadbalanceRules.ROUND_ROBIN)
+@DubboService(cluster = ClusterRules.FAIL_FAST, loadbalance = LoadbalanceRules.ROUND_ROBIN, validation = "true")
 public class HelloApiImpl implements HelloApi {
 
     private static final String talkFormat = "[%s]%s";
